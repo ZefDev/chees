@@ -4,12 +4,13 @@
   class Queen extends AbstractChessmen
   {
 
-    function __construct()
+    function __construct($x,$y)
     {
-      // code...
+      $this->x = $x;
+      $this->y = $y;
     }
     public function move() {
-        return array('x' =>$x , 'y' =>$y);
+        return array('x' =>$this->x , 'y' =>$this->y);
     }
   }
 
