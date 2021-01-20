@@ -10,7 +10,7 @@ abstract class AbstractChessmen implements IChessmen
 
     }
     public function getPosition(){
-      return array('x' =>$this->x , 'y' =>$this->y);
+      return "Позиция ".get_class($this) ." x = $this->x , y = $this->y";
     }
 }
  ?>

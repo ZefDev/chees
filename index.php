@@ -6,9 +6,17 @@
   $king = new King(4,3);
   $queen = new Queen(1,1);
   // перемещение фигур
-  $queen->move(7,3);
-  $king->move(2,2);
+  $data_queen = $queen->move(7,3);
+  $data_king = $king->move(2,2);
+  //Исключение возвращается в массиве, если при ходе была ошибка,
+  //то здесь мы её и выводим
+  if (isset($data_queen['error'])) {
+    echo $data_queen['error'].'</br>';
+  }
+  if (isset($data_king['error'])) {
+    echo $data_king['error'].'</br>';
+  }
   // вывод позиций
-  print_r($queen->getPosition());
-  print_r($king->getPosition());
+  echo $queen->getPosition().'</br>';
+  echo $king->getPosition().'</br>';
 ?>
