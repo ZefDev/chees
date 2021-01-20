@@ -1,7 +1,7 @@
 <?php
   require_once 'AbstractChessmen.php';
 
-  class King extends AbstractChessmen
+  class Queen extends AbstractChessmen
   {
 
     function __construct()
