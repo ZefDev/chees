@@ -2,8 +2,13 @@
   require_once 'Queen.php';
   require_once 'King.php';
 
-  $king = new King(1,1);
-  $queen = new Queen(4,3);
-  print_r($king->move());
-  print_r($queen->move());
+  //создали фигуры
+  $king = new King(4,3);
+  $queen = new Queen(1,1);
+  // перемещение фигур
+  $queen->move(7,3);
+  $king->move(2,2);
+  // вывод позиций
+  print_r($queen->getPosition());
+  print_r($king->getPosition());
 ?>
